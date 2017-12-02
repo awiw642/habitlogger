@@ -107,7 +107,6 @@ body {
 }
 
 /*Calendar Styling*/
-
 div#calendar {
   position: relative;
   display: flex;
@@ -240,3 +239,4 @@ div.calendar-controls .today {
   background: #e8e8e8;
   z-index: 1;
 }
+
