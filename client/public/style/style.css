@@ -1,0 +1,85 @@
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+  grid-row-gap: 5em;
+}
+
+.app-bar {
+  width: 100%;
+  grid-column: 1/5;
+  grid-row: 1/2;
+}
+
+.main {
+  width: 100%;
+  grid-column: 1/3;
+  grid-row: 2/4;
+}
+
+/*Login.jsx*/
+.login-signup {
+  width: 100%;
+  grid-column: 1/5;
+  grid-row: 2/5;
+}
+
+.login-signup-subgrid {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-row-gap: 5em;
+}
+
+.title {
+  grid-column: 2/3;
+  text-align: center;
+}
+
+.login-box {
+  text-align: center;
+  grid-column: 1/2;
+  margin: auto;
+}
+
+.signup-box {
+  text-align: center;
+  grid-column: 3/4;
+  margin: auto;
+}
+
+.visualization-logo > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.quote {
+  grid-column: 1/4;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+
+.improve-yourself {
+  grid-column: 1/2;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.feature-list {
+  grid-column: 3/4;
+  margin: 0 auto;
+  text-align: center;
+}
