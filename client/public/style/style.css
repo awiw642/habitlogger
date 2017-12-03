@@ -107,6 +107,7 @@ body {
 }
 
 /*Calendar Styling*/
+
 div#calendar {
   position: relative;
   display: flex;
