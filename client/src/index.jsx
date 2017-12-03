@@ -8,6 +8,7 @@ import Login from './Login.jsx';
 import EventCreator from './EventCreator.jsx';
 import EventSelector from './EventSelector.jsx';
 import LoggerCalendar from './LoggerCalendar.jsx';
+import Toolbar from './Toolbar.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -200,17 +201,19 @@ class App extends React.Component {
       initialPage = <Login login={this.login} signup={this.signup} />;
     } else {
       initialPage = (
-        <div>
-          <div className="row rowA">
-            <EventCreator createHabit={this.createHabit} />
-            <DataLogger
-              habits={this.state.habits}
-              getHabitsInfo={this.getHabitsInfo.bind(this)}
-              logHabit={this.logHabit}
-            />
-            <EventSelector habits={this.state.habits} selectHabit={this.selectHabit} />
-            <LoggerCalendar />
-          </div>
+        <div className="content content-subgrid">
+          <Toolbar
+            habits={this.state.habits}
+            getHabitsInfo={this.getHabitsInfo.bind(this)}
+            createHabit={this.createHabit}
+          />
+          <DataLogger
+            habits={this.state.habits}
+            getHabitsInfo={this.getHabitsInfo.bind(this)}
+            logHabit={this.logHabit}
+          />
+          <EventSelector habits={this.state.habits} selectHabit={this.selectHabit} />
+          <LoggerCalendar />
         </div>
       );
     }
@@ -226,16 +229,3 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
-
-// FORMER CHART DATA COMPONENTS
-
-// <div className="row rowB">
-//   <MuiThemeProvider>
-//   {this.state.viewData ?
-//     <MuiTable habit={this.state.viewHabit} timeframe={this.state.timeframe} unit={this.state.unit} limit={this.state.limit} occurrences={this.state.occurrences} /> : null}
-//   </MuiThemeProvider>
-// </div>
-// <div className="row rowC">
-//   {this.state.viewData ?
-//     <Chart habit={this.state.viewHabit} timeframe={this.state.timeframe} unit={this.state.unit} limit={this.state.limit} occurrences={this.state.occurrences} /> : null}
-// </div>
