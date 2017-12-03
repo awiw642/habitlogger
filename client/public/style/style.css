@@ -5,7 +5,7 @@ body {
   padding: 0;
   margin: 0;
   width: 100%;
-  background-color: #F7F5E6;
+  background-color: #f7f5e6;
   background: url('sayagata-400px.png');
 }
 
@@ -112,10 +112,10 @@ div#calendar {
   position: absolute;
   top: 650px;
   width: 70%;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 5px;
   border: 1px solid #5a5a5a;
   background-color: white;
@@ -255,7 +255,6 @@ div.calendar-controls .today {
   border: 2px solid #333a56;
   background: #f3f4f5;
   box-shadow: 0 5px 10px #343d55;
-
 }
 
 /* App toolbar */
@@ -264,25 +263,23 @@ div.calendar-controls .today {
   box-shadow: 0 5px 10px #343d55;
 }
 
-
 /* Data Charts */
 .chart-container {
   grid-column: 2/2;
   justify-self: left;
 }
 
-.chart-container svg{
+.chart-container svg {
   box-shadow: 0 5px 10px #343d55;
 }
 
 .graph-button {
   box-shadow: 0 3px 3px #343d55;
-  background-color: #EC407A !important;
+  background-color: #ec407a !important;
   padding: 10px;
   margin: 5px 5px 20px 5px;
-  color: #F7F5E6;
+  color: #f7f5e6;
 }
-
 
 /* Top row grid */
 .top-row__container {
@@ -297,6 +294,5 @@ div.calendar-controls .today {
 .button {
   border-radius: 5px;
   margin: 5px 5px 20px 5px;
-  background-color: #EC407A !important;
+  background-color: #ec407a !important;
 }
-

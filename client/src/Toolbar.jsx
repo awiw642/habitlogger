@@ -93,7 +93,7 @@ export default class AppToolbar extends React.Component {
       <div className="app-toolbar">
         <Toolbar>
           <ToolbarGroup firstChild={true}>
-            <RaisedButton  label="Create a new habit" onClick={this.toggleDialog} />
+            <RaisedButton label="Create a new habit" onClick={this.toggleDialog} />
             <Dialog
               title="Create a new habit"
               actions={actions}
@@ -115,9 +115,8 @@ export default class AppToolbar extends React.Component {
             <EventSelector habits={this.props.habits} selectHabit={this.props.selectHabit} />
           </ToolbarGroup>
           <ToolbarGroup>
-            <RaisedButton label="Delete Habit"  />
+            <RaisedButton label="Delete Habit" />
           </ToolbarGroup>
-       
         </Toolbar>
       </div>
     );
