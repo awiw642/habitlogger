@@ -241,3 +241,10 @@ div.calendar-controls .today {
   z-index: 1;
 }
 
+/*Data Logger*/
+.data-logger {
+  width: 350px;
+  margin: auto;
+  padding: 10px;
+  border: 2px solid #333a56;
+}

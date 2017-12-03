@@ -139,7 +139,7 @@ class App extends React.Component {
   }
 
   // used in dataLogger to record occurrence in database (POST)
-  logHabit(event, time, quantity) {
+  logHabit(event, time, quantity, notes) {
     let fieldsFilled = this.checkFields(event, quantity);
     if (fieldsFilled) {
       let occurrence = {
@@ -149,6 +149,7 @@ class App extends React.Component {
           timestamp: time,
           value: quantity,
         },
+        notes: notes,
       };
       axios
         .post(`/api/${this.state.username}/log`, occurrence)
