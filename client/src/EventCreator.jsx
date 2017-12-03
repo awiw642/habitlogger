@@ -21,7 +21,6 @@ export default class EventCreator extends React.Component {
   render() {
     return (
       <div className="eventCreator">
-        <h1>Habit Creator</h1>
         <TextField
           name="event"
           value={this.props.event}
