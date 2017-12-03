@@ -16,11 +16,16 @@ export default class AppToolbar extends React.Component {
       event: '',
       units: '',
       limit: '',
+      value: 0,
+      timeframes: ['Day', 'Week', 'Month'],
+      currentTimeframe: 'Day',
     };
 
     this.toggleDialog = this.toggleDialog.bind(this);
     this.createHabit = this.createHabit.bind(this);
     this.updateHabit = this.updateHabit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleDeadlineChange = this.handleDeadlineChange.bind(this);
   }
 
   toggleDialog() {
@@ -36,16 +41,33 @@ export default class AppToolbar extends React.Component {
   }
 
   createHabit() {
-    this.props.createHabit(this.state.event, this.state.units, this.state.limit);
+    this.props.createHabit(this.state.event, this.state.units, this.state.limit, this.state.currentTimeframe);
     this.setState({
       event: '',
       units: '',
       limit: '',
+      currentTimeframe: 'day',
+      value: 0,
+      deadline: '',
     });
     this.toggleDialog();
   }
 
+  handleChange(e, index) {
+    this.setState({
+      value: index,
+      currentTimeframe: this.state.timeframes[index],
+    });
+  }
+
+  handleDeadlineChange(e, date) {
+    this.setState({
+      deadline: date,
+    });
+  }
+
   render() {
+    console.log(this.state);
     const actions = [
       <FlatButton label="Save" primary={true} onClick={this.createHabit} />,
       <FlatButton label="Cancel" secondary={true} onClick={this.toggleDialog} />,
@@ -65,6 +87,10 @@ export default class AppToolbar extends React.Component {
                 units={this.state.units}
                 limit={this.state.limit}
                 updateHabit={this.updateHabit}
+                value={this.state.value}
+                timeframes={this.state.timeframes}
+                handleChange={this.handleChange}
+                handleDeadlineChange={this.handleDeadlineChange}
               />
             </Dialog>
           </ToolbarGroup>

@@ -170,13 +170,14 @@ class App extends React.Component {
   }
 
   //used by EventCreator to add habits to user's list of habits in database
-  createHabit(name, unit, limit, timeframe) {
+  createHabit(name, unit, limit, timeframe, deadline) {
     let habit = {
       username: this.state.username,
       habit: name,
       limit: limit,
       unit: unit,
       timeframe: timeframe,
+      deadline: deadline,
     };
     axios
       .post(`/api/${this.state.username}/habit`, habit)
@@ -197,6 +198,7 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.state);
     let initialPage;
     if (!this.state.username) {
       initialPage = <Login login={this.login} signup={this.signup} />;
