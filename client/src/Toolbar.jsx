@@ -5,6 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
 import EventCreator from './EventCreator.jsx';
+import EventSelector from './EventSelector.jsx';
 
 export default class AppToolbar extends React.Component {
   constructor(props) {
@@ -66,6 +67,9 @@ export default class AppToolbar extends React.Component {
                 updateHabit={this.updateHabit}
               />
             </Dialog>
+          </ToolbarGroup>
+          <ToolbarGroup>
+            <EventSelector habits={this.props.habits} selectHabit={this.props.selectHabit} />
           </ToolbarGroup>
         </Toolbar>
       </div>
