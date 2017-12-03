@@ -205,15 +205,11 @@ class App extends React.Component {
         <div className="content content-subgrid">
           <Toolbar
             habits={this.state.habits}
-            getHabitsInfo={this.getHabitsInfo.bind(this)}
+            getHabitsInfo={this.getHabitsInfo}
             createHabit={this.createHabit}
+            selectHabit={this.selectHabit}
           />
-          <DataLogger
-            habits={this.state.habits}
-            getHabitsInfo={this.getHabitsInfo.bind(this)}
-            logHabit={this.logHabit}
-          />
-          <EventSelector habits={this.state.habits} selectHabit={this.selectHabit} />
+          <DataLogger habits={this.state.habits} getHabitsInfo={this.getHabitsInfo} logHabit={this.logHabit} />
           <LoggerCalendar />
         </div>
       );
