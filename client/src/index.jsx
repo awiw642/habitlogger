@@ -204,21 +204,23 @@ class App extends React.Component {
     if (!this.state.username) {
       initialPage = <Login login={this.login} signup={this.signup} />;
     } else {
-      initialPage = (<div>
-        <div className="content content-subgrid">
-          <Toolbar
-            habits={this.state.habits}
-            getHabitsInfo={this.getHabitsInfo}
-            createHabit={this.createHabit}
-            selectHabit={this.selectHabit}
-          />
+      initialPage = (
+        <div>
+          <div className="content content-subgrid">
+            <Toolbar
+              habits={this.state.habits}
+              getHabitsInfo={this.getHabitsInfo}
+              createHabit={this.createHabit}
+              selectHabit={this.selectHabit}
+            />
             <LoggerCalendar />
+          </div>
+          <div className="top-row__container">
+            <DataLogger habits={this.state.habits} getHabitsInfo={this.getHabitsInfo} logHabit={this.logHabit} />
+            <Chart />
+          </div>
         </div>
-        <div className="top-row__container">
-          <DataLogger habits={this.state.habits} getHabitsInfo={this.getHabitsInfo} logHabit={this.logHabit} />
-          <Chart />
-        </div>
-      </div>);
+      );
     }
     return (
       <div className="wrapper">
