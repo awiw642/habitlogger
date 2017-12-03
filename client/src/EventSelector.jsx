@@ -7,7 +7,7 @@ export default class EventSelector extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 0,
+      value: null,
       currentHabit: '',
     };
     this.handleChange = this.handleChange.bind(this);
